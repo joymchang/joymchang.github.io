@@ -1,48 +1,51 @@
-# Personal Portfolio — React + TypeScript + Vite
+# Joy Chang’s Portfolio
 
-## 1. Open in VS Code
-Unzip this folder, then open **the entire `joy-portfolio` folder** using VS Code → File → Open Folder.
+React, TypeScript, and Vite portfolio for https://joymchang.github.io/.
 
-## 2. Run locally
-Install Node.js LTS from https://nodejs.org/ if necessary. In VS Code → Terminal → New Terminal, run:
+## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Open the local URL Vite prints (usually http://localhost:5173/). Stop with Ctrl+C.
+## Edit the site
 
-## 3. Personalize
-- **src/data.ts**: edit your name, bio, skills, experience, projects, publications, and URLs. Replace `YOUR_EMAIL`, `YOUR_USERNAME`, `YOUR_PROFILE`.
-- **public/resume.pdf**: add your resume as a PDF with this exact filename. The Resume button will work after you add it.
-- **index.html**: edit page title and SEO description.
-- **src/style.css**: edit accent colors and design.
-- **src/main.tsx**: change section layout and content components.
-- Project `github` and `demo` URLs can be blank; links will only display when populated.
+- `src/data.ts`: bio, experience, projects, publications, artwork, and profile links. Blank lines in `about` create separate paragraphs.
+- `src/main.tsx`: sections and interactive components.
+- `src/style.css`: colors, typography, and layout.
+- `public/`: images and résumé PDF. The résumé filename must match `profile.resume` in `src/data.ts` (currently `Joy_Chang_10_14_26_Resume.pdf`).
+- `index.html`: page title and description.
 
-## 4. Publish with GitHub Pages (recommended: GitHub Actions)
-1. Create a **public** GitHub repository named `YOUR_USERNAME.github.io` for a root website, OR any other repository name (e.g. `portfolio`) for a project site.
-2. In the VS Code terminal, run:
+## Deploy to your existing GitHub repository
+
+The remote is already configured as `https://github.com/joymchang/joymchang.github.io.git`.
+
+1. Open the repository on GitHub, then **Settings → Pages → Build and deployment → Source → GitHub Actions**.
+2. Review your changes, commit, and push to `main`:
+
+   ```bash
+   git add .github/workflows/deploy.yml .gitignore README.md
+   git commit -m "Prepare GitHub Pages deployment"
+   git push origin main
+   ```
+
+   Include any other website files you have changed in your commit as well.
+
+3. In the repository’s **Actions** tab, watch **Deploy Portfolio to GitHub Pages** complete.
+4. Visit https://joymchang.github.io/.
+
+Each push to `main` rebuilds and deploys the site. You can also run the workflow manually from the Actions tab.
+
+The workflow installs locked dependencies with `npm ci`, runs the TypeScript and Vite build, and deploys `dist` using the `github-pages` environment. Build output and `node_modules` do not need to be committed.
+
+Vite’s `base: '/'` is correct for this username repository. If you move the site to a project repository, change `base` in `vite.config.ts` to `'/REPOSITORY_NAME/'`.
+
+## Check the production build locally
 
 ```bash
-git init
-git add .
-git commit -m "Initial portfolio"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
+npm run build
+npm run preview
 ```
 
-3. On GitHub, open the repository → **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. The workflow at `.github/workflows/deploy.yml` will build and deploy your site after each push to `main`.
-5. Open `https://YOUR_USERNAME.github.io/` for a root repository, or `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/` for a project repository.
-6. Subsequent updates: `git add . && git commit -m "Update portfolio" && git push`.
-
-The Vite `base: './'` setting works for both root and project sites. GitHub Pages supports static hosting; this site does not need a server.
-
-## Troubleshooting
-- `npm: command not found`: install Node.js LTS and restart VS Code.
-- Blank page: check GitHub Actions workflow, ensure Pages Source is GitHub Actions, and check browser console.
-- Resume returns 404: place `resume.pdf` in the `public/` folder, commit, and push.
-- `remote origin already exists`: use `git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git`.
+If deployment fails, check the failed step under Actions and confirm that Pages uses GitHub Actions as its source. For missing images or PDFs, verify exact filename capitalization and that the files are committed under `public/`.
