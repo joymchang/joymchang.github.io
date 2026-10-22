@@ -22,9 +22,12 @@ export const skills = [
   { group: 'Tools', items: ['Git & GitHub', 'Docker', 'Jupyter', 'VS Code', 'Jira', 'Xcode'] },
 ];
 export const experience = [
+  { role: 'IT DevOps Engineer Intern', org: 'Lynden Inc.', date: 'Jun 2026 – Sep 2026', description: 'Automated GitHub repository migration workflows and supported enterprise systems, networking, and technical troubleshooting.', tags: ['Python', 'GitHub API', 'Infrastructure'] },
   { role: 'Research Assistant', org: 'UW User Empowerment Lab', date: 'Mar 2025 – Present', description: 'Study how emerging adults interact with conversational AI, using large-scale conversation analysis, NLP, and longitudinal methods.', tags: ['Python', 'NLP', 'Research'] },
-  { role: 'IT Infrastructure Intern', org: 'Lynden Inc.', date: 'Jun 2026 – Sep 2026', description: 'Automated GitHub repository migration workflows and supported enterprise systems, networking, and technical troubleshooting.', tags: ['Python', 'GitHub API', 'Infrastructure'] },
+  { role: 'Lead Front-end Engineer', org: 'Husky Coding Project', date: 'Sept 2025 – Jun 2026', description: 'Lead front-end development and UI/UX design for a React Native productivity platform, building responsive interfaces and interactive dashboards while integrating REST APIs, OAuth authentication, and CI/CD workflows.', tags: ['Swift', 'UI/UX Design', 'REST APIs'] },
+  { role: 'Diversity Committee Lead', org: 'UW Women in Informatics', date: 'Mar 2025 – Present', description: 'Directed the Amazon-sponsored “Fearless, Tech More” UX hackathon with 150+ participants - coordinating event operations, sponsor communication, and leading marketing & design efforts to boost event attendance by 25%.', tags: ['Leadership', 'Communication', 'Organization'] },
   { role: 'Software Development Intern', org: 'Sensoria Health', date: 'Sep 2023 – Jun 2024', description: 'Contributed to an iOS experience for smart-textile wheelchair pressure monitoring and accessible health technology.', tags: ['Swift', 'iOS', 'Accessibility'] },
+  { role: 'Web & App Development Scholar', org: 'Kode With Klossy', date: 'July 2022 – July 2023', description: 'Selected on scholarship to attend an immersive coding program focused on web and mobile app development using HTML, CSS, Javascript, and Swift. Emphasized usability and accessible design principles.', tags: ['Swift', 'HTML/CSS', 'Javascript'] },
 ];
 export const projects = [
   { title: 'Husky Maps', category: 'Algorithms', description: 'Navigation and search features powered by graph algorithms, priority queues, and efficient autocomplete data structures.', tags: ['Java', 'Dijkstra', 'Data Structures'], github: 'https://github.com/joymchang/Husky-Maps-Data-Structures-and-Algorithms-', demo: '' },
