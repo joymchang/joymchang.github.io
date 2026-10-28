@@ -47,14 +47,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .publications-group{margin-top:58px;scroll-margin-top:100px}
 .work-subheading{font-size:29px;margin:0 0 24px}
 .publications-group .publication+.publication{margin-top:18px}
-.artwork-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
-.artwork-piece{margin:0;min-width:0}
-.artwork-piece>a{display:block;overflow:hidden;background:var(--surface);border-radius:3px}
-.artwork-piece img{display:block;width:100%;height:auto;transition:transform .3s}
-.artwork-piece>a:hover img{transform:scale(1.025)}
-.artwork-piece h3{font-size:24px;margin:18px 0 6px}
-.artwork-piece figcaption p{font-size:13px;color:var(--muted);margin:0}
+.artwork-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px;align-items:start}
+.artwork-piece{margin:0;min-width:0;width:100%;max-width:360px}
+.artwork-image{width:100%}
+.artwork-piece img{display:block;width:100%;height:auto;border-radius:3px}
+.artwork-piece figcaption{padding-top:16px}
+.artwork-piece h3{font-size:24px;line-height:1.25;margin:0 0 8px}
+.artwork-piece figcaption p{font-family:inherit;font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.artwork-piece figcaption p+p{margin-top:10px}
 .artwork-empty{padding:48px 24px;border:1px dashed var(--line);border-radius:3px;text-align:center;color:var(--muted)}
 .artwork-empty p{margin:0;font-size:14px}
 @media(max-width:700px){.artwork-grid{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.artwork-piece>a:hover img{transform:none}}

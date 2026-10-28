@@ -37,8 +37,8 @@ export const projects = [
   { title: 'Education & Employment Trends', category: 'Data Analytics', description: 'Analyzed U.S. higher education enrollment and unemployment trends from 2003–2021 using R. Cleaned, transformed, and joined datasets with dplyr and tidyr to explore relationships between educational attainment, demographic characteristics, and employment outcomes.', tags: ['R', 'dplyr', 'tidyr', 'Data Cleaning', 'Data Analysis'], github: '', demo: `${import.meta.env.BASE_URL}projects/201finalprojdataprocessing.html` },
   { title: 'COMPAS: Evaluating Bias in Criminal Justice Algorithms', category: 'Machine Learning', description: 'Analyzed 6,172 criminal justice records using R to evaluate racial disparities in COMPAS recidivism risk predictions. Explored fairness–accuracy tradeoffs to assess the ethical implications of algorithmic decision-making.', tags: ['R', 'tidyverse', 'Data Analysis'], demo: `${import.meta.env.BASE_URL}projects/info370problemSet7.html`  },
   { title: 'Web-Based Meal Planning Application', category: 'Full-Stack Web Development', description: 'Designed, developed, and deployed a web-based meal planning application to help users organize their meals through a streamlined, user-friendly interface. Focused on responsive web design, intuitive navigation, and delivering an accessible experience through Firebase Hosting.', tags: ['UI/UX', 'Cloud Deployment', 'HTML/CSS/Javascript'], demo: 'https://meal-planner-planner.web.app/' },
-  { title: 'Project', category: 'cat', description: 'desc', tags: ['tag1', 'tag2', 'tag3'], github: '', demo: '' },
-  { title: 'Project', category: 'cat', description: 'desc', tags: ['tag1', 'tag2', 'tag3'], github: '', demo: '' },
+  { title: 'WIP', category: 'cat', description: 'coming soon...', tags: ['tag1', 'tag2', 'tag3'], github: '', demo: '' },
+  { title: 'WIP', category: 'cat', description: 'coming soon...', tags: ['tag1', 'tag2', 'tag3'], github: '', demo: '' },
 
 ];
 export const publications = [
@@ -47,4 +47,8 @@ export const publications = [
 
 // Add artwork images to public/ and list their relative paths here.
 // Example: { title: 'Title', image: 'artwork/piece.jpg', alt: 'Description of the artwork', medium: 'Watercolor' }
-export const artwork: { title: string; image: string; alt: string; medium?: string }[] = [];
+export const artwork: { title: string; image: string; alt: string; medium?: string }[] = [
+  { title: 'Still Life', image: 'artwork/oil3.png', alt: 'Still life painting', medium: 'Oil' },
+  { title: 'Still Life', image: 'artwork/oil1.png', alt: 'Still life painting', medium: 'Oil' },
+  { title: 'Connection', image: 'artwork/reachingOut.png', alt: 'The paradox of seeking connection with something that thrives in isolation.', medium: 'Oil' },
+];
